@@ -67,3 +67,24 @@ connect to the following services via the Tailscale IP / MagicDNS name of the Un
     devices are connected.
 
     ![](../../assets/tailscale/tailscale-console.png)
+
+## Finish Tailscale Setup
+
+1.  Open the [Tailscale DNS Settings](https://login.tailscale.com/admin/dns).
+
+2.  (Optional) Click **Rename tailnet..** . This will allow you to select a more friendly .ts.net domain name for your
+    devices.
+
+    ![](../../assets/tailscale/rename-tailnet.png)
+
+3.  At the bottom of the DNS page, click **Enable HTTPS**. This will allow Tailscale to generate SSL certificates for
+    your devices (e.g., to avoid certificate warnings when accessing the Unraid WebGUI.)
+
+    :::note
+    Machine names are published in a public certificate ledger when HTTPS is enabled. The public ledger only provides
+    information about the names of the TLS certificates; access to your devices is still restricted by Tailscale.
+
+    For more information, see the [Tailscale HTTPS documentation](https://tailscale.com/kb/1153/enabling-https#machine-names-in-the-public-ledger).
+    :::
+
+    ![](../../assets/tailscale/enable-https.png)
